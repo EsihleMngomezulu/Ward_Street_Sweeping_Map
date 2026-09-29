@@ -23,7 +23,7 @@ var style_Official_Planning_Suburbs_1 = function(feature, resolution){
         labelText = String(feature.get("OFC_SBRB_N"));
     }
     var style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(53,121,177,0,60)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 6.688}),
+        stroke: new ol.style.Stroke({color: 'rgba(53,121,177,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 6.688}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth, textAlign, offsetX, offsetY, overflow, repeat)
