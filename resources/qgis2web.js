@@ -4,20 +4,20 @@ var map = new ol.Map({
     renderer: 'canvas',
     layers: layersList,
     view: new ol.View({
-        constrainResolution: true,
+        constrainResolution: false,
         maxZoom: 28,
         minZoom: 1,
         
         projection: new ol.proj.Projection({
             code: 'EPSG:3857',
-            //extent: [2037950.408302, -4077020.424120, 2115607.355457, -3958026.346835],
+            //extent: [2037950.408302, -4077115.346000, 2115607.355457, -3958026.078900],
             units: 'm'
         })
     })
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([2066124.641103, -4030751.502065, 2077252.852808, -4023188.639740], map.getSize());
+map.getView().fit([2065106.396296, -4015478.909549, 2071384.251360, -4011212.406107], map.getSize());
 
 //change cursor
 function pointerOnFeature(evt) {
@@ -152,7 +152,7 @@ var featureOverlay = new ol.layer.Vector({
     updateWhileInteracting: true // optional, for instant visual feedback
 });
 
-var doHighlight = true;
+var doHighlight = false;
 var doHover = false;
 
 function createPopupField(currentFeature, currentFeatureKeys, layer) {
@@ -299,7 +299,7 @@ function onPointerMove(evt) {
                     highlightStyle = new ol.style.Style({
                         image: new ol.style.Circle({
                             fill: new ol.style.Fill({
-                                color: "rgba(255, 255, 0, 1.00)"
+                                color: "rgba(255, 255, 255, 1.00)"
                             }),
                             radius: radius
                         })
@@ -310,7 +310,7 @@ function onPointerMove(evt) {
 
                     highlightStyle = new ol.style.Style({
                         stroke: new ol.style.Stroke({
-                            color: 'rgba(255, 255, 0, 1.00)',
+                            color: 'rgba(255, 255, 255, 1.00)',
                             lineDash: null,
                             width: featureWidth
                         })
@@ -319,7 +319,7 @@ function onPointerMove(evt) {
                 } else {
                     highlightStyle = new ol.style.Style({
                         fill: new ol.style.Fill({
-                            color: 'rgba(255, 255, 0, 1.00)'
+                            color: 'rgba(255, 255, 255, 1.00)'
                         })
                     })
                 }
@@ -586,22 +586,11 @@ var bottomRightContainerDiv = document.getElementById('bottom-right-container')
 //layerswitcher
 
 var layerSwitcher = new ol.control.LayerSwitcher({
-    activationMode: 'click',
-	startActive: true,
-	tipLabel: "Layers",
-    target: 'top-right-container',
-	collapseLabel: '»',
-	collapseTipLabel: 'Close'
-    });
+    tipLabel: "Layers",
+    target: 'top-right-container'
+});
 map.addControl(layerSwitcher);
-if (hasTouchScreen || isSmallScreen) {
-	document.addEventListener('DOMContentLoaded', function() {
-		setTimeout(function() {
-			layerSwitcher.hidePanel();
-		}, 500);
-	});	
-}
-
+    
 
 
 

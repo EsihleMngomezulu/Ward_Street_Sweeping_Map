@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_Wards_1 = function(feature, resolution){
+var style_Official_Planning_Suburbs_2 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -9,21 +9,21 @@ var style_Wards_1 = function(feature, resolution){
     
     var labelText = ""; 
     var value = feature.get("");
-    var labelFont = "13.0px \'Open Sans\', sans-serif";
-    var labelFill = "#8b2ca0";
+    var labelFont = "7.800000000000001px \'Open Sans\', sans-serif";
+    var labelFill = "#1e4ade";
     var bufferColor = "";
     var bufferWidth = 0;
-    var textAlign = 'center';
-    var offsetX = 0;
-    var offsetY = 0;
+    var textAlign = 'left';
+    var offsetX = 8;
+    var offsetY = 3;
     var overflow = false;
     var repeat = 0;
     var placement = 'point';
-    if (feature.get("WARD_NAME") !== null) {
-        labelText = String(feature.get("WARD_NAME"));
+    if (feature.get("OFC_SBRB_N") !== null) {
+        labelText = String(feature.get("OFC_SBRB_N"));
     }
     var style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(236,26,205,0.9176470588235294)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 4.4079999999999995}),
+        stroke: new ol.style.Stroke({color: 'rgba(40,78,205,1.0)', lineDash: [3.268,6.536], lineCap: 'square', lineJoin: 'bevel', width: 3.268}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth, textAlign, offsetX, offsetY, overflow, repeat)
