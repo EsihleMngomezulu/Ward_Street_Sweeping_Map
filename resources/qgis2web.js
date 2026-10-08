@@ -10,14 +10,14 @@ var map = new ol.Map({
         
         projection: new ol.proj.Projection({
             code: 'EPSG:3857',
-            //extent: [2037950.408302, -4077115.346000, 2115607.355457, -3958026.078900],
+            //extent: [2037950.408300, -4077115.346000, 2115607.355500, -3958026.078900],
             units: 'm'
         })
     })
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([2059580.417229, -4035082.921456, 2084691.837485, -4018016.907690], map.getSize());
+map.getView().fit([2068322.236514, -4021707.473572, 2080788.273442, -4014097.392890], map.getSize());
 
 //change cursor
 function pointerOnFeature(evt) {
