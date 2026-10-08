@@ -9,7 +9,7 @@ var style_Official_Planning_Suburbs_2 = function(feature, resolution){
     
     var labelText = ""; 
     var value = feature.get("");
-    var labelFont = "7.800000000000001px \'Open Sans\', sans-serif";
+    var labelFont = "13.0px \'Open Sans\', sans-serif";
     var labelFill = "#1e4ade";
     var bufferColor = "";
     var bufferWidth = 0;
@@ -23,7 +23,7 @@ var style_Official_Planning_Suburbs_2 = function(feature, resolution){
         labelText = String(feature.get("OFC_SBRB_N"));
     }
     var style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(40,78,205,1.0)', lineDash: [3.268,6.536], lineCap: 'square', lineJoin: 'bevel', width: 3.268}),
+        stroke: new ol.style.Stroke({color: 'rgba(53,121,177,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 6.688}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth, textAlign, offsetX, offsetY, overflow, repeat)
