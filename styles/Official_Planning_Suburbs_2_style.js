@@ -9,7 +9,7 @@ var style_Official_Planning_Suburbs_2 = function(feature, resolution){
     
     var labelText = ""; 
     var value = feature.get("");
-    var labelFont = "13.0px \'Open Sans\', sans-serif";
+    var labelFont = "bold 15.0px \'Open Sans\', sans-serif";
     var labelFill = "#1e4ade";
     var bufferColor = "";
     var bufferWidth = 0;
