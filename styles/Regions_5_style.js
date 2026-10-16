@@ -23,7 +23,7 @@ var style_Regions_5 = function(feature, resolution){
         labelText = String(feature.get("DSTR_NAME"));
     }
     var style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(228,26,28,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 5.168}),
+        stroke: new ol.style.Stroke({color: 'rgba(228,26,28,0,3)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 5.168}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth, textAlign, offsetX, offsetY, overflow, repeat)
