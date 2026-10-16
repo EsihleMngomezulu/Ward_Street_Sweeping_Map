@@ -194,7 +194,7 @@ var style_Sub_councils_3 = function(feature, resolution){
     
     var labelText = ""; 
     var value = feature.get("SUB_CNCL_N");
-    var labelFont = "16px \'Open Sans\', sans-serif";
+    var labelFont = "bold 17px \'Open Sans\', sans-serif";
     var labelFill = "#323232";
     var bufferColor = "";
     var bufferWidth = 0;
