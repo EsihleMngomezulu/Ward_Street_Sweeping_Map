@@ -9,8 +9,8 @@ var style_Wards_1 = function(feature, resolution){
     
     var labelText = ""; 
     var value = feature.get("");
-    var labelFont = "13.0px \'Open Sans\', sans-serif";
-    var labelFill = "#8b2ca0";
+    var labelFont = "11.700000000000001px \'Open Sans\', sans-serif";
+    var labelFill = "#e05ccc";
     var bufferColor = "";
     var bufferWidth = 0;
     var textAlign = 'center';
