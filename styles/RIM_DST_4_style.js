@@ -94,7 +94,7 @@ var style_RIM_DST_4 = function(feature, resolution){
     
     var labelText = ""; 
     var value = feature.get("RIM_Type");
-    var labelFont = "16.0px \'Open Sans\', sans-serif";
+    var labelFont = "bold 16.0px \'Open Sans\', sans-serif";
     var labelFill = "#323232";
     var bufferColor = "";
     var bufferWidth = 0;
