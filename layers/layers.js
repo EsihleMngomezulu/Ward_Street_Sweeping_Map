@@ -25,7 +25,7 @@ var lyr_Official_Planning_Suburbs_1 = new ol.layer.Vector({
     declutter: false,
     source: jsonSource_Official_Planning_Suburbs_1,
     style: style_Official_Planning_Suburbs_1,
-    opacity: 0.45,
+    opacity: 0.50,
     popuplayertitle: 'Official_Planning_Suburbs',
     interactive: true,
     title: '<img src="styles/legend/Official_Planning_Suburbs_1.png" /> Official_Planning_Suburbs'
@@ -41,7 +41,7 @@ var lyr_Wards_2 = new ol.layer.Vector({
     declutter: false,
     source: jsonSource_Wards_2,
     style: style_Wards_2,
-    opacity: 0.45,
+    opacity: 0.50,
     popuplayertitle: 'Wards',
     interactive: true,
     title: '<img src="styles/legend/Wards_2.png" /> Wards'
@@ -58,7 +58,7 @@ var lyr_Sub_councils_3 = new ol.layer.Vector({
     declutter: false,
     source: jsonSource_Sub_councils_3,
     style: style_Sub_councils_3,
-    opacity: 0.45,
+    opacity: 0.50,
     popuplayertitle: 'Sub_councils',
     interactive: true,
     title: 'Sub_councils<br />\
@@ -95,7 +95,7 @@ var lyr_RIM_DST_4 = new ol.layer.Vector({
     declutter: false,
     source: jsonSource_RIM_DST_4,
     style: style_RIM_DST_4,
-    opacity: 0.45,
+    opacity: 0.50,
     popuplayertitle: 'RIM_DST',
     interactive: true,
     title: 'RIM_DST<br />\
