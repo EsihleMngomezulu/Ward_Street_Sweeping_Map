@@ -22,13 +22,14 @@ var jsonSource_Official_Planning_Suburbs_1 = new ol.source.Vector({
 });
 jsonSource_Official_Planning_Suburbs_1.addFeatures(features_Official_Planning_Suburbs_1);
 var lyr_Official_Planning_Suburbs_1 = new ol.layer.Vector({
-                declutter: false,
-                source:jsonSource_Official_Planning_Suburbs_1, 
-                style: style_Official_Planning_Suburbs_1,
-                popuplayertitle: 'Official_Planning_Suburbs',
-                interactive: true,
-                title: '<img src="styles/legend/Official_Planning_Suburbs_1.png" /> Official_Planning_Suburbs'
-            });
+    declutter: false,
+    source: jsonSource_Official_Planning_Suburbs_1,
+    style: style_Official_Planning_Suburbs_1,
+    opacity: 0.3,
+    popuplayertitle: 'Official_Planning_Suburbs',
+    interactive: true,
+    title: '<img src="styles/legend/Official_Planning_Suburbs_1.png" /> Official_Planning_Suburbs'
+});
 var format_Wards_2 = new ol.format.GeoJSON();
 var features_Wards_2 = format_Wards_2.readFeatures(json_Wards_2, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
@@ -37,13 +38,14 @@ var jsonSource_Wards_2 = new ol.source.Vector({
 });
 jsonSource_Wards_2.addFeatures(features_Wards_2);
 var lyr_Wards_2 = new ol.layer.Vector({
-                declutter: false,
-                source:jsonSource_Wards_2, 
-                style: style_Wards_2,
-                popuplayertitle: 'Wards',
-                interactive: true,
-                title: '<img src="styles/legend/Wards_2.png" /> Wards'
-            });
+    declutter: false,
+    source: jsonSource_Wards_2,
+    style: style_Wards_2,
+    opacity: 0.3,
+    popuplayertitle: 'Wards',
+    interactive: true,
+    title: '<img src="styles/legend/Wards_2.png" /> Wards'
+});
 var format_Sub_councils_3 = new ol.format.GeoJSON();
 var features_Sub_councils_3 = format_Sub_councils_3.readFeatures(json_Sub_councils_3, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
@@ -51,12 +53,14 @@ var jsonSource_Sub_councils_3 = new ol.source.Vector({
     attributions: ' ',
 });
 jsonSource_Sub_councils_3.addFeatures(features_Sub_councils_3);
+
 var lyr_Sub_councils_3 = new ol.layer.Vector({
-                declutter: false,
-                source:jsonSource_Sub_councils_3, 
-                style: style_Sub_councils_3,
-                popuplayertitle: 'Sub_councils',
-                interactive: true,
+    declutter: false,
+    source: jsonSource_Sub_councils_3,
+    style: style_Sub_councils_3,
+    opacity: 0.3,
+    popuplayertitle: 'Sub_councils',
+    interactive: true,
     title: 'Sub_councils<br />\
     <img src="styles/legend/Sub_councils_3_0.png" /> Subcouncil 1<br />\
     <img src="styles/legend/Sub_councils_3_1.png" /> Subcouncil 2<br />\
@@ -77,7 +81,9 @@ var lyr_Sub_councils_3 = new ol.layer.Vector({
     <img src="styles/legend/Sub_councils_3_16.png" /> Subcouncil 17<br />\
     <img src="styles/legend/Sub_councils_3_17.png" /> Subcouncil 18<br />\
     <img src="styles/legend/Sub_councils_3_18.png" /> Subcouncil 19<br />\
-    <img src="styles/legend/Sub_councils_3_19.png" /> Subcouncil 20<br />' });
+    <img src="styles/legend/Sub_councils_3_19.png" /> Subcouncil 20<br />'
+});
+
 var format_RIM_DST_4 = new ol.format.GeoJSON();
 var features_RIM_DST_4 = format_RIM_DST_4.readFeatures(json_RIM_DST_4, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
@@ -86,11 +92,12 @@ var jsonSource_RIM_DST_4 = new ol.source.Vector({
 });
 jsonSource_RIM_DST_4.addFeatures(features_RIM_DST_4);
 var lyr_RIM_DST_4 = new ol.layer.Vector({
-                declutter: false,
-                source:jsonSource_RIM_DST_4, 
-                style: style_RIM_DST_4,
-                popuplayertitle: 'RIM_DST',
-                interactive: true,
+    declutter: false,
+    source: jsonSource_RIM_DST_4,
+    style: style_RIM_DST_4,
+    opacity: 0.3,
+    popuplayertitle: 'RIM_DST',
+    interactive: true,
     title: 'RIM_DST<br />\
     <img src="styles/legend/RIM_DST_4_0.png" /> District 1<br />\
     <img src="styles/legend/RIM_DST_4_1.png" /> District 2<br />\
@@ -100,7 +107,8 @@ var lyr_RIM_DST_4 = new ol.layer.Vector({
     <img src="styles/legend/RIM_DST_4_5.png" /> District 6<br />\
     <img src="styles/legend/RIM_DST_4_6.png" /> District 7<br />\
     <img src="styles/legend/RIM_DST_4_7.png" /> District 8<br />\
-    <img src="styles/legend/RIM_DST_4_8.png" /> <br />' });
+    <img src="styles/legend/RIM_DST_4_8.png" /> <br />'
+});
 var format_Regions_5 = new ol.format.GeoJSON();
 var features_Regions_5 = format_Regions_5.readFeatures(json_Regions_5, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
