@@ -123,12 +123,12 @@ var lyr_Regions_5 = new ol.layer.Vector({
 
 lyr_ESRITopo_0.setVisible(true);lyr_Official_Planning_Suburbs_1.setVisible(true);lyr_Wards_2.setVisible(true);lyr_Sub_councils_3.setVisible(true);lyr_RIM_DST_4.setVisible(true);lyr_Regions_5.setVisible(true);
 var layersList = [
-  lyr_Regions_5,
-    lyr_Wards_2,
-    lyr_Official_Planning_Suburbs_1,
-    lyr_RIM_DST_4,
+  lyr_ESRITopo_0,                    // Bottom: ESRI Topo
     lyr_Sub_councils_3,
-    lyr_ESRITopo_0
+    lyr_RIM_DST_4,
+    lyr_Official_Planning_Suburbs_1,
+    lyr_Wards_2,
+    lyr_Regions_5                       // Top: Regions
 ];
 lyr_Official_Planning_Suburbs_1.set('fieldAliases', {'OBJECTID': 'OBJECTID', 'GlobalID': 'GlobalID', 'SL_OFC_SBR': 'SL_OFC_SBR', 'OFC_SBRB_N': 'OFC_SBRB_N', 'created_us': 'created_us', 'created_da': 'created_da', 'last_edite': 'last_edite', 'last_edi_1': 'last_edi_1', 'Shape_Leng': 'Shape_Leng', 'Shape_Area': 'Shape_Area', });
 lyr_Wards_2.set('fieldAliases', {'OBJECTID': 'OBJECTID', 'WARD_NAME': 'WARD_NAME', 'WARD_YEAR': 'WARD_YEAR', 'Shape__Are': 'Shape__Are', 'Shape__Len': 'Shape__Len', });
