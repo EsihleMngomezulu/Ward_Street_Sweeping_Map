@@ -3,17 +3,14 @@ ol.proj.proj4.register(proj4);
 var wms_layers = [];
 
 
-        var lyr_ESRITopo_0 = new ol.layer.Tile({
-            'title': 'ESRI Topo',
-            'type':'base',
-            'opacity': 1.000000,
-            
-            
-            source: new ol.source.XYZ({
-            attributions: ' ',
-                url: 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}'
-            })
-        });
+      var lyr_ESRITopo_0 = new ol.layer.Tile({
+    'title': 'ESRI Topo',
+    'opacity': 1.000000,
+    source: new ol.source.XYZ({
+        attributions: ' ',
+        url: 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}'
+    })
+});
 var format_Official_Planning_Suburbs_1 = new ol.format.GeoJSON();
 var features_Official_Planning_Suburbs_1 = format_Official_Planning_Suburbs_1.readFeatures(json_Official_Planning_Suburbs_1, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
