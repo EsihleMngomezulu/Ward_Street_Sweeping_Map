@@ -23,7 +23,7 @@ var style_Wards_2 = function(feature, resolution){
         labelText = String(feature.get("WARD_NAME"));
     }
     var style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(236,26,205,0.50)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 4.4079999999999995}),
+        stroke: new ol.style.Stroke({color: 'rgba(236,26,205,0.30)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 4.4079999999999995}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth, textAlign, offsetX, offsetY, overflow, repeat)
