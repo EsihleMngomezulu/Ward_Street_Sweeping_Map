@@ -42,33 +42,28 @@ var lyr_Wards_2 = new ol.layer.Vector({
     title: '<img src="styles/legend/Wards_2.png" /> Wards'
 });
 var format_Sub_councils_3 = new ol.format.GeoJSON();
-var features_Sub_councils_3 = format_Sub_councils_3.readFeatures(json_Sub_councils_3, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var subCouncilLayers = [];
+var features_Sub_councils_3 = format_Sub_councils_3.readFeatures(
+    json_Sub_councils_3,
+    {
+        dataProjection: 'EPSG:4326',
+        featureProjection: 'EPSG:3857'
+    }
+);
 
-for (var i = 1; i <= 20; i++) {
-    (function (num) {
-        var councilName = 'Subcouncil ' + num;
+var jsonSource_Sub_councils_3 = new ol.source.Vector({
+    attributions: ' '
+});
 
-        var councilFeatures = features_Sub_councils_3.filter(
-            function (feature) {
-                return feature.get('SUB_CNCL_N') === councilName;
-            }
-        );
+jsonSource_Sub_councils_3.addFeatures(features_Sub_councils_3);
 
-        var councilSource = new ol.source.Vector({
-            attributions: ' ',
-            features: councilFeatures
-        });
-
-        var councilLayer = new ol.layer.Vector({
-            declutter: false,
-            source: councilSource,
-            style: style_Sub_councils_3,
-            popuplayertitle: councilName,
-            interactive: true,
-            title: councilName
-        });
+var lyr_Sub_councils_3 = new ol.layer.Vector({
+    declutter: false,
+    source: jsonSource_Sub_councils_3,
+    style: style_Sub_councils_3,
+    popuplayertitle: 'Subcouncils',
+    interactive: true,
+    title: 'Subcouncils'
+});
 
         councilLayer.setVisible(true);
         subCouncilLayers.push(councilLayer);
@@ -123,7 +118,7 @@ lyr_Regions_5.setVisible(true);
 
 var layersList = [
     lyr_ESRITopo_0,                    // Bottom: ESRI Topo
-    ...subCouncilLayers,               // Subcouncils 1–20
+    lyr_Sub_councils_3,                // Subcouncils
     lyr_RIM_DST_4,
     lyr_Official_Planning_Suburbs_1,
     lyr_Wards_2,
