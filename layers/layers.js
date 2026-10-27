@@ -158,6 +158,4 @@ lyr_Wards_2.set('fieldLabels', {'OBJECTID': 'no label', 'WARD_NAME': 'inline lab
 
 lyr_RIM_DST_4.set('fieldLabels', {'RIM_Type': 'inline label - always visible', });
 lyr_Regions_5.set('fieldLabels', {'GIS_KEY': 'no label', 'SAP_KEY': 'no label', 'DSTR_NMBR': 'no label', 'DSTR_NAME': 'inline label - always visible', 'MNGR1_NAME': 'no label', 'MNGR1_PHN': 'no label', 'MNGR1_CELL': 'no label', 'MNGR2_NAME': 'no label', 'MNGR2_PHN': 'no label', 'MNGR2_CELL': 'no label', 'GIS_TECH_N': 'no label', 'GIS_TECH_P': 'no label', 'CMNT': 'no label', 'TEMP_ID1': 'no label', 'TEMP_ID2': 'no label', 'DPT_CODE': 'no label', 'created_us': 'no label', 'created_da': 'no label', 'last_edite': 'no label', 'last_edi_1': 'no label', 'GlobalID': 'no label', });
-lyr_Regions_5.on('precompose', function(evt) {
-    evt.context.globalCompositeOperation = 'normal';
-});
+
