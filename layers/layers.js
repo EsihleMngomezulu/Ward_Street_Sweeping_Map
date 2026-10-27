@@ -63,7 +63,7 @@ var lyr_Sub_councils_3 = new ol.layer.Vector({
     style: style_Sub_councils_3,
     popuplayertitle: 'Subcouncils',
     interactive: true,
-    title: 'Subcouncils <details><summary>Show 20 subcouncils</summary>\
+    title: '<details><summary>Subcouncils</summary>\
     <img src="styles/legend/Sub_councils_3_0.png" /> Subcouncil 1<br />\
     <img src="styles/legend/Sub_councils_3_1.png" /> Subcouncil 2<br />\
     <img src="styles/legend/Sub_councils_3_2.png" /> Subcouncil 3<br />\
