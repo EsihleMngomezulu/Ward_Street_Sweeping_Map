@@ -56,14 +56,37 @@ var jsonSource_Sub_councils_3 = new ol.source.Vector({
 
 jsonSource_Sub_councils_3.addFeatures(features_Sub_councils_3);
 
+
 var lyr_Sub_councils_3 = new ol.layer.Vector({
     declutter: false,
     source: jsonSource_Sub_councils_3,
     style: style_Sub_councils_3,
     popuplayertitle: 'Subcouncils',
     interactive: true,
-    title: 'Subcouncils'
+    title: 'Subcouncils <details><summary>Show 20 subcouncils</summary>\
+    <img src="styles/legend/Sub_councils_3_0.png" /> Subcouncil 1<br />\
+    <img src="styles/legend/Sub_councils_3_1.png" /> Subcouncil 2<br />\
+    <img src="styles/legend/Sub_councils_3_2.png" /> Subcouncil 3<br />\
+    <img src="styles/legend/Sub_councils_3_3.png" /> Subcouncil 4<br />\
+    <img src="styles/legend/Sub_councils_3_4.png" /> Subcouncil 5<br />\
+    <img src="styles/legend/Sub_councils_3_5.png" /> Subcouncil 6<br />\
+    <img src="styles/legend/Sub_councils_3_6.png" /> Subcouncil 7<br />\
+    <img src="styles/legend/Sub_councils_3_7.png" /> Subcouncil 8<br />\
+    <img src="styles/legend/Sub_councils_3_8.png" /> Subcouncil 9<br />\
+    <img src="styles/legend/Sub_councils_3_9.png" /> Subcouncil 10<br />\
+    <img src="styles/legend/Sub_councils_3_10.png" /> Subcouncil 11<br />\
+    <img src="styles/legend/Sub_councils_3_11.png" /> Subcouncil 12<br />\
+    <img src="styles/legend/Sub_councils_3_12.png" /> Subcouncil 13<br />\
+    <img src="styles/legend/Sub_councils_3_13.png" /> Subcouncil 14<br />\
+    <img src="styles/legend/Sub_councils_3_14.png" /> Subcouncil 15<br />\
+    <img src="styles/legend/Sub_councils_3_15.png" /> Subcouncil 16<br />\
+    <img src="styles/legend/Sub_councils_3_16.png" /> Subcouncil 17<br />\
+    <img src="styles/legend/Sub_councils_3_17.png" /> Subcouncil 18<br />\
+    <img src="styles/legend/Sub_councils_3_18.png" /> Subcouncil 19<br />\
+    <img src="styles/legend/Sub_councils_3_19.png" /> Subcouncil 20<br />\
+    </details>'
 });
+
 
 
 var format_RIM_DST_4 = new ol.format.GeoJSON();
@@ -111,6 +134,7 @@ lyr_Official_Planning_Suburbs_1.setVisible(true);
 lyr_Wards_2.setVisible(true);
 lyr_RIM_DST_4.setVisible(true);
 lyr_Regions_5.setVisible(true);
+lyr_Sub_councils_3.setVisible(true);
 
 var layersList = [
     lyr_ESRITopo_0,
