@@ -102,7 +102,7 @@ var lyr_RIM_DST_4 = new ol.layer.Vector({
     style: style_RIM_DST_4,
     popuplayertitle: 'RIM_DST',
     interactive: true,
-    title: 'RIM_DST<br />\
+    title: 'RIM Districts <details><summary>Show 8 districts</summary>\
     <img src="styles/legend/RIM_DST_4_0.png" /> District 1<br />\
     <img src="styles/legend/RIM_DST_4_1.png" /> District 2<br />\
     <img src="styles/legend/RIM_DST_4_2.png" /> District 3<br />\
@@ -111,7 +111,7 @@ var lyr_RIM_DST_4 = new ol.layer.Vector({
     <img src="styles/legend/RIM_DST_4_5.png" /> District 6<br />\
     <img src="styles/legend/RIM_DST_4_6.png" /> District 7<br />\
     <img src="styles/legend/RIM_DST_4_7.png" /> District 8<br />\
-    <img src="styles/legend/RIM_DST_4_8.png" /> <br />'
+    </details>'
 });
 var format_Regions_5 = new ol.format.GeoJSON();
 var features_Regions_5 = format_Regions_5.readFeatures(json_Regions_5, 
