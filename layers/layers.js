@@ -64,6 +64,13 @@ var lyr_Sub_councils_3 = new ol.layer.Vector({
     interactive: true,
     title: 'Subcouncils'
 });
+var group_Subcouncils = new ol.layer.Group({
+    title: 'Subcouncils',
+    fold: 'close',
+    layers: [
+        lyr_Sub_councils_3
+    ]
+});
 
         councilLayer.setVisible(true);
         subCouncilLayers.push(councilLayer);
@@ -118,7 +125,7 @@ lyr_Regions_5.setVisible(true);
 
 var layersList = [
     lyr_ESRITopo_0,                    // Bottom: ESRI Topo
-    lyr_Sub_councils_3,                // Subcouncils
+    group_Subcouncils,                 // Collapsed Subcouncils group
     lyr_RIM_DST_4,
     lyr_Official_Planning_Suburbs_1,
     lyr_Wards_2,
