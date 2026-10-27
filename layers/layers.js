@@ -125,7 +125,7 @@ lyr_Regions_5.setVisible(true);
 
 var layersList = [
     lyr_ESRITopo_0,                    // Bottom: ESRI Topo
-    group_Subcouncils,                 // Collapsed Subcouncils group
+    lyr_Sub_councils_3,                 // Collapsed lyr_Sub_councils_3
     lyr_RIM_DST_4,
     lyr_Official_Planning_Suburbs_1,
     lyr_Wards_2,
