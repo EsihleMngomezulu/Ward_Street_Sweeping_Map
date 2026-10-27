@@ -72,10 +72,6 @@ var group_Subcouncils = new ol.layer.Group({
     ]
 });
 
-        councilLayer.setVisible(true);
-        subCouncilLayers.push(councilLayer);
-    })(i);
-}
 
 var format_RIM_DST_4 = new ol.format.GeoJSON();
 var features_RIM_DST_4 = format_RIM_DST_4.readFeatures(json_RIM_DST_4, 
@@ -124,17 +120,17 @@ lyr_RIM_DST_4.setVisible(true);
 lyr_Regions_5.setVisible(true);
 
 var layersList = [
-    lyr_ESRITopo_0,                    // Bottom: ESRI Topo
-    lyr_Sub_councils_3,                 // Collapsed lyr_Sub_councils_3
+    lyr_ESRITopo_0,
+    group_Subcouncils,
     lyr_RIM_DST_4,
     lyr_Official_Planning_Suburbs_1,
     lyr_Wards_2,
-    lyr_Regions_5                      // Top: Regions
+    lyr_Regions_5
 ];
 lyr_Official_Planning_Suburbs_1.set('fieldAliases', {'OBJECTID': 'OBJECTID', 'GlobalID': 'GlobalID', 'SL_OFC_SBR': 'SL_OFC_SBR', 'OFC_SBRB_N': 'OFC_SBRB_N', 'created_us': 'created_us', 'created_da': 'created_da', 'last_edite': 'last_edite', 'last_edi_1': 'last_edi_1', 'Shape_Leng': 'Shape_Leng', 'Shape_Area': 'Shape_Area', });
 lyr_Wards_2.set('fieldAliases', {'OBJECTID': 'OBJECTID', 'WARD_NAME': 'WARD_NAME', 'WARD_YEAR': 'WARD_YEAR', 'Shape__Are': 'Shape__Are', 'Shape__Len': 'Shape__Len', });
-subCouncilLayers.forEach(function(layer) {
-    layer.set('fieldAliases', {
+.forEach(function(layer) {
+    lyr_Sub_councils_3.set('fieldAliases', {
         'OBJECTID': 'OBJECTID',
         'SUB_CNCL_N': 'SUB_CNCL_N',
         'SUB_CNCL_1': 'SUB_CNCL_1',
@@ -142,7 +138,7 @@ subCouncilLayers.forEach(function(layer) {
         'SHAPE_Area': 'SHAPE_Area'
     });
 
-    layer.set('fieldImages', {
+     lyr_Sub_councils_3.set('fieldImages', {
         'OBJECTID': 'Range',
         'SUB_CNCL_N': 'TextEdit',
         'SUB_CNCL_1': 'Range',
@@ -150,7 +146,7 @@ subCouncilLayers.forEach(function(layer) {
         'SHAPE_Area': 'TextEdit'
     });
 
-    layer.set('fieldLabels', {
+  lyr_Sub_councils_3.set('fieldLabels', {
         'OBJECTID': 'no label',
         'SUB_CNCL_N': 'inline label - always visible',
         'SUB_CNCL_1': 'no label',
