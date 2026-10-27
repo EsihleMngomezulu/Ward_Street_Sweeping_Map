@@ -131,17 +131,40 @@ var layersList = [
 ];
 lyr_Official_Planning_Suburbs_1.set('fieldAliases', {'OBJECTID': 'OBJECTID', 'GlobalID': 'GlobalID', 'SL_OFC_SBR': 'SL_OFC_SBR', 'OFC_SBRB_N': 'OFC_SBRB_N', 'created_us': 'created_us', 'created_da': 'created_da', 'last_edite': 'last_edite', 'last_edi_1': 'last_edi_1', 'Shape_Leng': 'Shape_Leng', 'Shape_Area': 'Shape_Area', });
 lyr_Wards_2.set('fieldAliases', {'OBJECTID': 'OBJECTID', 'WARD_NAME': 'WARD_NAME', 'WARD_YEAR': 'WARD_YEAR', 'Shape__Are': 'Shape__Are', 'Shape__Len': 'Shape__Len', });
-lyr_Sub_councils_3.set('fieldAliases', {'OBJECTID': 'OBJECTID', 'SUB_CNCL_N': 'SUB_CNCL_N', 'SUB_CNCL_1': 'SUB_CNCL_1', 'SHAPE_Leng': 'SHAPE_Leng', 'SHAPE_Area': 'SHAPE_Area', });
+subCouncilLayers.forEach(function(layer) {
+    layer.set('fieldAliases', {
+        'OBJECTID': 'OBJECTID',
+        'SUB_CNCL_N': 'SUB_CNCL_N',
+        'SUB_CNCL_1': 'SUB_CNCL_1',
+        'SHAPE_Leng': 'SHAPE_Leng',
+        'SHAPE_Area': 'SHAPE_Area'
+    });
+
+    layer.set('fieldImages', {
+        'OBJECTID': 'Range',
+        'SUB_CNCL_N': 'TextEdit',
+        'SUB_CNCL_1': 'Range',
+        'SHAPE_Leng': 'TextEdit',
+        'SHAPE_Area': 'TextEdit'
+    });
+
+    layer.set('fieldLabels', {
+        'OBJECTID': 'no label',
+        'SUB_CNCL_N': 'inline label - always visible',
+        'SUB_CNCL_1': 'no label',
+        'SHAPE_Leng': 'no label',
+        'SHAPE_Area': 'no label'
+});
 lyr_RIM_DST_4.set('fieldAliases', {'RIM_Type': 'RIM_Type', });
 lyr_Regions_5.set('fieldAliases', {'GIS_KEY': 'GIS_KEY', 'SAP_KEY': 'SAP_KEY', 'DSTR_NMBR': 'DSTR_NMBR', 'DSTR_NAME': 'DSTR_NAME', 'MNGR1_NAME': 'MNGR1_NAME', 'MNGR1_PHN': 'MNGR1_PHN', 'MNGR1_CELL': 'MNGR1_CELL', 'MNGR2_NAME': 'MNGR2_NAME', 'MNGR2_PHN': 'MNGR2_PHN', 'MNGR2_CELL': 'MNGR2_CELL', 'GIS_TECH_N': 'GIS_TECH_N', 'GIS_TECH_P': 'GIS_TECH_P', 'CMNT': 'CMNT', 'TEMP_ID1': 'TEMP_ID1', 'TEMP_ID2': 'TEMP_ID2', 'DPT_CODE': 'DPT_CODE', 'created_us': 'created_us', 'created_da': 'created_da', 'last_edite': 'last_edite', 'last_edi_1': 'last_edi_1', 'GlobalID': 'GlobalID', });
 lyr_Official_Planning_Suburbs_1.set('fieldImages', {'OBJECTID': 'Range', 'GlobalID': 'TextEdit', 'SL_OFC_SBR': 'Range', 'OFC_SBRB_N': 'TextEdit', 'created_us': 'TextEdit', 'created_da': 'TextEdit', 'last_edite': 'TextEdit', 'last_edi_1': 'TextEdit', 'Shape_Leng': 'TextEdit', 'Shape_Area': 'TextEdit', });
 lyr_Wards_2.set('fieldImages', {'OBJECTID': 'Range', 'WARD_NAME': 'TextEdit', 'WARD_YEAR': 'Range', 'Shape__Are': 'TextEdit', 'Shape__Len': 'TextEdit', });
-lyr_Sub_councils_3.set('fieldImages', {'OBJECTID': 'Range', 'SUB_CNCL_N': 'TextEdit', 'SUB_CNCL_1': 'Range', 'SHAPE_Leng': 'TextEdit', 'SHAPE_Area': 'TextEdit', });
+
 lyr_RIM_DST_4.set('fieldImages', {'RIM_Type': 'TextEdit', });
 lyr_Regions_5.set('fieldImages', {'GIS_KEY': 'TextEdit', 'SAP_KEY': 'TextEdit', 'DSTR_NMBR': 'TextEdit', 'DSTR_NAME': 'TextEdit', 'MNGR1_NAME': 'TextEdit', 'MNGR1_PHN': 'TextEdit', 'MNGR1_CELL': 'TextEdit', 'MNGR2_NAME': 'TextEdit', 'MNGR2_PHN': 'TextEdit', 'MNGR2_CELL': 'TextEdit', 'GIS_TECH_N': 'TextEdit', 'GIS_TECH_P': 'TextEdit', 'CMNT': 'TextEdit', 'TEMP_ID1': 'TextEdit', 'TEMP_ID2': 'TextEdit', 'DPT_CODE': 'TextEdit', 'created_us': 'TextEdit', 'created_da': 'DateTime', 'last_edite': 'TextEdit', 'last_edi_1': 'DateTime', 'GlobalID': 'TextEdit', });
 lyr_Official_Planning_Suburbs_1.set('fieldLabels', {'OBJECTID': 'no label', 'GlobalID': 'no label', 'SL_OFC_SBR': 'no label', 'OFC_SBRB_N': 'inline label - always visible', 'created_us': 'no label', 'created_da': 'no label', 'last_edite': 'no label', 'last_edi_1': 'no label', 'Shape_Leng': 'no label', 'Shape_Area': 'no label', });
 lyr_Wards_2.set('fieldLabels', {'OBJECTID': 'no label', 'WARD_NAME': 'inline label - always visible', 'WARD_YEAR': 'no label', 'Shape__Are': 'no label', 'Shape__Len': 'no label', });
-lyr_Sub_councils_3.set('fieldLabels', {'OBJECTID': 'no label', 'SUB_CNCL_N': 'inline label - always visible', 'SUB_CNCL_1': 'no label', 'SHAPE_Leng': 'no label', 'SHAPE_Area': 'no label', });
+
 lyr_RIM_DST_4.set('fieldLabels', {'RIM_Type': 'inline label - always visible', });
 lyr_Regions_5.set('fieldLabels', {'GIS_KEY': 'no label', 'SAP_KEY': 'no label', 'DSTR_NMBR': 'no label', 'DSTR_NAME': 'inline label - always visible', 'MNGR1_NAME': 'no label', 'MNGR1_PHN': 'no label', 'MNGR1_CELL': 'no label', 'MNGR2_NAME': 'no label', 'MNGR2_PHN': 'no label', 'MNGR2_CELL': 'no label', 'GIS_TECH_N': 'no label', 'GIS_TECH_P': 'no label', 'CMNT': 'no label', 'TEMP_ID1': 'no label', 'TEMP_ID2': 'no label', 'DPT_CODE': 'no label', 'created_us': 'no label', 'created_da': 'no label', 'last_edite': 'no label', 'last_edi_1': 'no label', 'GlobalID': 'no label', });
 lyr_Regions_5.on('precompose', function(evt) {
