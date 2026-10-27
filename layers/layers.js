@@ -154,7 +154,9 @@ subCouncilLayers.forEach(function(layer) {
         'SUB_CNCL_1': 'no label',
         'SHAPE_Leng': 'no label',
         'SHAPE_Area': 'no label'
+      });    
 });
+      
 lyr_RIM_DST_4.set('fieldAliases', {'RIM_Type': 'RIM_Type', });
 lyr_Regions_5.set('fieldAliases', {'GIS_KEY': 'GIS_KEY', 'SAP_KEY': 'SAP_KEY', 'DSTR_NMBR': 'DSTR_NMBR', 'DSTR_NAME': 'DSTR_NAME', 'MNGR1_NAME': 'MNGR1_NAME', 'MNGR1_PHN': 'MNGR1_PHN', 'MNGR1_CELL': 'MNGR1_CELL', 'MNGR2_NAME': 'MNGR2_NAME', 'MNGR2_PHN': 'MNGR2_PHN', 'MNGR2_CELL': 'MNGR2_CELL', 'GIS_TECH_N': 'GIS_TECH_N', 'GIS_TECH_P': 'GIS_TECH_P', 'CMNT': 'CMNT', 'TEMP_ID1': 'TEMP_ID1', 'TEMP_ID2': 'TEMP_ID2', 'DPT_CODE': 'DPT_CODE', 'created_us': 'created_us', 'created_da': 'created_da', 'last_edite': 'last_edite', 'last_edi_1': 'last_edi_1', 'GlobalID': 'GlobalID', });
 lyr_Official_Planning_Suburbs_1.set('fieldImages', {'OBJECTID': 'Range', 'GlobalID': 'TextEdit', 'SL_OFC_SBR': 'Range', 'OFC_SBRB_N': 'TextEdit', 'created_us': 'TextEdit', 'created_da': 'TextEdit', 'last_edite': 'TextEdit', 'last_edi_1': 'TextEdit', 'Shape_Leng': 'TextEdit', 'Shape_Area': 'TextEdit', });
