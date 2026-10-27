@@ -55,7 +55,7 @@ var lyr_Sub_councils_3 = new ol.layer.Vector({
     style: style_Sub_councils_3,
     popuplayertitle: 'Sub_councils',
     interactive: true,
-    title: 'Sub_councils<br />\
+    title: 'Subcouncils <details><summary>Show 20 subcouncils</summary>\
     <img src="styles/legend/Sub_councils_3_0.png" /> Subcouncil 1<br />\
     <img src="styles/legend/Sub_councils_3_1.png" /> Subcouncil 2<br />\
     <img src="styles/legend/Sub_councils_3_2.png" /> Subcouncil 3<br />\
@@ -75,7 +75,8 @@ var lyr_Sub_councils_3 = new ol.layer.Vector({
     <img src="styles/legend/Sub_councils_3_16.png" /> Subcouncil 17<br />\
     <img src="styles/legend/Sub_councils_3_17.png" /> Subcouncil 18<br />\
     <img src="styles/legend/Sub_councils_3_18.png" /> Subcouncil 19<br />\
-    <img src="styles/legend/Sub_councils_3_19.png" /> Subcouncil 20<br />'
+    <img src="styles/legend/Sub_councils_3_19.png" /> Subcouncil 20<br />\
+    </details>'
 });
 
 var format_RIM_DST_4 = new ol.format.GeoJSON();
