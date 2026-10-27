@@ -129,30 +129,28 @@ var layersList = [
 ];
 lyr_Official_Planning_Suburbs_1.set('fieldAliases', {'OBJECTID': 'OBJECTID', 'GlobalID': 'GlobalID', 'SL_OFC_SBR': 'SL_OFC_SBR', 'OFC_SBRB_N': 'OFC_SBRB_N', 'created_us': 'created_us', 'created_da': 'created_da', 'last_edite': 'last_edite', 'last_edi_1': 'last_edi_1', 'Shape_Leng': 'Shape_Leng', 'Shape_Area': 'Shape_Area', });
 lyr_Wards_2.set('fieldAliases', {'OBJECTID': 'OBJECTID', 'WARD_NAME': 'WARD_NAME', 'WARD_YEAR': 'WARD_YEAR', 'Shape__Are': 'Shape__Are', 'Shape__Len': 'Shape__Len', });
-.forEach(function(layer) {
-    lyr_Sub_councils_3.set('fieldAliases', {
-        'OBJECTID': 'OBJECTID',
-        'SUB_CNCL_N': 'SUB_CNCL_N',
-        'SUB_CNCL_1': 'SUB_CNCL_1',
-        'SHAPE_Leng': 'SHAPE_Leng',
-        'SHAPE_Area': 'SHAPE_Area'
-    });
+lyr_Sub_councils_3.set('fieldAliases', {
+    'OBJECTID': 'OBJECTID',
+    'SUB_CNCL_N': 'SUB_CNCL_N',
+    'SUB_CNCL_1': 'SUB_CNCL_1',
+    'SHAPE_Leng': 'SHAPE_Leng',
+    'SHAPE_Area': 'SHAPE_Area'
+});
 
-     lyr_Sub_councils_3.set('fieldImages', {
-        'OBJECTID': 'Range',
-        'SUB_CNCL_N': 'TextEdit',
-        'SUB_CNCL_1': 'Range',
-        'SHAPE_Leng': 'TextEdit',
-        'SHAPE_Area': 'TextEdit'
-    });
+lyr_Sub_councils_3.set('fieldImages', {
+    'OBJECTID': 'Range',
+    'SUB_CNCL_N': 'TextEdit',
+    'SUB_CNCL_1': 'Range',
+    'SHAPE_Leng': 'TextEdit',
+    'SHAPE_Area': 'TextEdit'
+});
 
-  lyr_Sub_councils_3.set('fieldLabels', {
-        'OBJECTID': 'no label',
-        'SUB_CNCL_N': 'inline label - always visible',
-        'SUB_CNCL_1': 'no label',
-        'SHAPE_Leng': 'no label',
-        'SHAPE_Area': 'no label'
-      });    
+lyr_Sub_councils_3.set('fieldLabels', {
+    'OBJECTID': 'no label',
+    'SUB_CNCL_N': 'inline label - always visible',
+    'SUB_CNCL_1': 'no label',
+    'SHAPE_Leng': 'no label',
+    'SHAPE_Area': 'no label'
 });
       
 lyr_RIM_DST_4.set('fieldAliases', {'RIM_Type': 'RIM_Type', });
