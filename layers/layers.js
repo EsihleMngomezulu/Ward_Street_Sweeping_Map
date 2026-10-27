@@ -64,13 +64,6 @@ var lyr_Sub_councils_3 = new ol.layer.Vector({
     interactive: true,
     title: 'Subcouncils'
 });
-var group_Subcouncils = new ol.layer.Group({
-    title: 'Subcouncils',
-    fold: 'close',
-    layers: [
-        lyr_Sub_councils_3
-    ]
-});
 
 
 var format_RIM_DST_4 = new ol.format.GeoJSON();
