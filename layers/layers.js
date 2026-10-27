@@ -102,7 +102,7 @@ var lyr_RIM_DST_4 = new ol.layer.Vector({
     style: style_RIM_DST_4,
     popuplayertitle: 'RIM_DST',
     interactive: true,
-    title: 'RIM Districts <details><summary>Show 8 districts</summary>\
+    title: '<details><summary>RIM Districts</summary>\
     <img src="styles/legend/RIM_DST_4_0.png" /> District 1<br />\
     <img src="styles/legend/RIM_DST_4_1.png" /> District 2<br />\
     <img src="styles/legend/RIM_DST_4_2.png" /> District 3<br />\
