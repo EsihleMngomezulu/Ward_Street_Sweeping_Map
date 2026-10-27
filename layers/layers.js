@@ -44,40 +44,36 @@ var lyr_Wards_2 = new ol.layer.Vector({
 var format_Sub_councils_3 = new ol.format.GeoJSON();
 var features_Sub_councils_3 = format_Sub_councils_3.readFeatures(json_Sub_councils_3, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_Sub_councils_3 = new ol.source.Vector({
-    attributions: ' ',
-});
-jsonSource_Sub_councils_3.addFeatures(features_Sub_councils_3);
+var subCouncilLayers = [];
 
-var lyr_Sub_councils_3 = new ol.layer.Vector({
-    declutter: false,
-    source: jsonSource_Sub_councils_3,
-    style: style_Sub_councils_3,
-    popuplayertitle: 'Sub_councils',
-    interactive: true,
-    title: 'Subcouncils <details><summary>Show 20 subcouncils</summary>\
-    <img src="styles/legend/Sub_councils_3_0.png" /> Subcouncil 1<br />\
-    <img src="styles/legend/Sub_councils_3_1.png" /> Subcouncil 2<br />\
-    <img src="styles/legend/Sub_councils_3_2.png" /> Subcouncil 3<br />\
-    <img src="styles/legend/Sub_councils_3_3.png" /> Subcouncil 4<br />\
-    <img src="styles/legend/Sub_councils_3_4.png" /> Subcouncil 5<br />\
-    <img src="styles/legend/Sub_councils_3_5.png" /> Subcouncil 6<br />\
-    <img src="styles/legend/Sub_councils_3_6.png" /> Subcouncil 7<br />\
-    <img src="styles/legend/Sub_councils_3_7.png" /> Subcouncil 8<br />\
-    <img src="styles/legend/Sub_councils_3_8.png" /> Subcouncil 9<br />\
-    <img src="styles/legend/Sub_councils_3_9.png" /> Subcouncil 10<br />\
-    <img src="styles/legend/Sub_councils_3_10.png" /> Subcouncil 11<br />\
-    <img src="styles/legend/Sub_councils_3_11.png" /> Subcouncil 12<br />\
-    <img src="styles/legend/Sub_councils_3_12.png" /> Subcouncil 13<br />\
-    <img src="styles/legend/Sub_councils_3_13.png" /> Subcouncil 14<br />\
-    <img src="styles/legend/Sub_councils_3_14.png" /> Subcouncil 15<br />\
-    <img src="styles/legend/Sub_councils_3_15.png" /> Subcouncil 16<br />\
-    <img src="styles/legend/Sub_councils_3_16.png" /> Subcouncil 17<br />\
-    <img src="styles/legend/Sub_councils_3_17.png" /> Subcouncil 18<br />\
-    <img src="styles/legend/Sub_councils_3_18.png" /> Subcouncil 19<br />\
-    <img src="styles/legend/Sub_councils_3_19.png" /> Subcouncil 20<br />\
-    </details>'
-});
+for (var i = 1; i <= 20; i++) {
+    (function (num) {
+        var councilName = 'Subcouncil ' + num;
+
+        var councilFeatures = features_Sub_councils_3.filter(
+            function (feature) {
+                return feature.get('SUB_CNCL_N') === councilName;
+            }
+        );
+
+        var councilSource = new ol.source.Vector({
+            attributions: ' ',
+            features: councilFeatures
+        });
+
+        var councilLayer = new ol.layer.Vector({
+            declutter: false,
+            source: councilSource,
+            style: style_Sub_councils_3,
+            popuplayertitle: councilName,
+            interactive: true,
+            title: councilName
+        });
+
+        councilLayer.setVisible(true);
+        subCouncilLayers.push(councilLayer);
+    })(i);
+}
 
 var format_RIM_DST_4 = new ol.format.GeoJSON();
 var features_RIM_DST_4 = format_RIM_DST_4.readFeatures(json_RIM_DST_4, 
@@ -119,14 +115,19 @@ var lyr_Regions_5 = new ol.layer.Vector({
                 title: '<img src="styles/legend/Regions_5.png" /> Regions'
             });
 
-lyr_ESRITopo_0.setVisible(true);lyr_Official_Planning_Suburbs_1.setVisible(true);lyr_Wards_2.setVisible(true);lyr_Sub_councils_3.setVisible(true);lyr_RIM_DST_4.setVisible(true);lyr_Regions_5.setVisible(true);
+lyr_ESRITopo_0.setVisible(true);
+lyr_Official_Planning_Suburbs_1.setVisible(true);
+lyr_Wards_2.setVisible(true);
+lyr_RIM_DST_4.setVisible(true);
+lyr_Regions_5.setVisible(true);
+
 var layersList = [
-  lyr_ESRITopo_0,                    // Bottom: ESRI Topo
-    lyr_Sub_councils_3,
+    lyr_ESRITopo_0,                    // Bottom: ESRI Topo
+    ...subCouncilLayers,               // Subcouncils 1–20
     lyr_RIM_DST_4,
     lyr_Official_Planning_Suburbs_1,
     lyr_Wards_2,
-    lyr_Regions_5                       // Top: Regions
+    lyr_Regions_5                      // Top: Regions
 ];
 lyr_Official_Planning_Suburbs_1.set('fieldAliases', {'OBJECTID': 'OBJECTID', 'GlobalID': 'GlobalID', 'SL_OFC_SBR': 'SL_OFC_SBR', 'OFC_SBRB_N': 'OFC_SBRB_N', 'created_us': 'created_us', 'created_da': 'created_da', 'last_edite': 'last_edite', 'last_edi_1': 'last_edi_1', 'Shape_Leng': 'Shape_Leng', 'Shape_Area': 'Shape_Area', });
 lyr_Wards_2.set('fieldAliases', {'OBJECTID': 'OBJECTID', 'WARD_NAME': 'WARD_NAME', 'WARD_YEAR': 'WARD_YEAR', 'Shape__Are': 'Shape__Are', 'Shape__Len': 'Shape__Len', });
